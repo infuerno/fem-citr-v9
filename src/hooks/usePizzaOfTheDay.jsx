@@ -1,5 +1,5 @@
 import { useState, useEffect, useDebugValue } from "react";
-export const usePizzaOfTheDay = () => {
+const usePizzaOfTheDay = () => {
   const [pizzaOfTheDay, setPizzaOfTheDay] = useState(null);
   // For debugging purposes, we can use useDebugValue to show the current state of pizzaOfTheDay in the React DevTools
   useDebugValue(pizzaOfTheDay ? `${pizzaOfTheDay.id}` : "Loading...");
@@ -15,3 +15,5 @@ export const usePizzaOfTheDay = () => {
 
   return pizzaOfTheDay;
 };
+
+export default usePizzaOfTheDay;
